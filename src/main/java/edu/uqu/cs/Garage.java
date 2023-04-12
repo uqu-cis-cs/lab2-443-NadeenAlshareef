@@ -67,18 +67,23 @@ public class Garage{
      * Syntax:
      * public void methodName(String m)
      */
-    public void addCar(String modle){
+    public void addCar(String modle)
+    {
        boolean found=false;
-       for(int i=0; i<countCars;i++){
+       for(int i=0; i<countCars;i++)
+       {
            
-           if(allcars[i].getModel().equals(model)){ 
+           if(allcars[i].getModel().equals(modle))
+           { 
                found=true;
                allcars[i].moveCarIn();
            }
        }
-       if(!found){
+       if(!found)
+       {
            
-          if(countCars<allcars.length){
+          if(countCars<allcars.length)
+          {
              Car c=new Car();
              c.setModel(modle);
              allcars[countCars]=c;
@@ -86,7 +91,8 @@ public class Garage{
              allcars[countCars].moveCarIn();
              countCars++;
           }
-          else{
+          else
+          {
             System.out.println("Full Garage");
           }
        }
